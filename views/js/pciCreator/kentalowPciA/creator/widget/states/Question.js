@@ -19,7 +19,7 @@
 define([
     'taoQtiItem/qtiCreator/widgets/states/factory',
     'taoQtiItem/qtiCreator/widgets/interactions/states/Question',
-    'tpl!pciSampleA/creator/tpl/propertiesForm'
+    'tpl!kentalowPciA/creator/tpl/propertiesForm'
 ], function(stateFactory, Question, formTpl){
     'use strict';
 
