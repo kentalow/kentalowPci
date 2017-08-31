@@ -1,6 +1,6 @@
 {
 
-    "name": "oat-sa/training-pci",
+    "name": "kentalow/kentalowPci",
     "description" : "",
     "type" : "tao-extension",
     "authors" : [
@@ -28,5 +28,5 @@
         "psr-4" : {
             "oat\\kentalowPci\\" : ""
         }
-    } 
+    }
 }
