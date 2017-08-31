@@ -18,7 +18,7 @@
  *
  * */
 
-namespace oat\kentaroPci\scripts\install;
+namespace oat\kentalowPci\scripts\install;
 
 use oat\taoQtiItem\model\portableElement\action\RegisterPortableElement;
 
