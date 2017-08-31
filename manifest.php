@@ -19,12 +19,14 @@
  *
  */
 
+use oat\kentalowPci\scripts\install\RegisterKentalowPciA;
+
 return array(
     'name' => 'kentalowPci',
 	'label' => 'QTI PCI for training',
 	'description' => '',
     'license' => 'GPL-2.0',
-    'version' => '0.1.0',
+    'version' => '0.2.0',
 	'author' => 'Open Assessment Technologies',
 	'requires' => array(
 	    'qtiItemPci' => '>=1.1.0',
@@ -36,6 +38,7 @@ return array(
     ),
     'install' => array(
         'php'	=> array(
+          RegisterKentalowPciA::class
 		)
     ),
     'update' => 'oat\\kentalowPci\\scripts\\update\\Updater',

@@ -14,29 +14,26 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
- * Copyright (c) 2015 (original work) Open Assessment Technologies SA;
+ * Copyright (c) 2017 (original work) Open Assessment Technologies SA;
  *
+ * */
+
+namespace oat\kentaroPci\scripts\install;
+
+use oat\taoQtiItem\model\portableElement\action\RegisterPortableElement;
+
+/**
+ * Script to register the PCI "pciSampleA"
  *
+ * Usage:
+ * sudo -u www-data php index.php '\oat\trainingPci\scripts\install\RegisterPciSampleA'
+ *
+ * @package oat\trainingPci\scripts\install
  */
-
-namespace oat\kentalowPci\scripts\update;
-use oat\kentalowPci\scripts\install\RegisterKentalowPciA;
-
-class Updater extends \common_ext_ExtensionUpdater
+class RegisterKentalowPciA extends RegisterPortableElement
 {
-
-    /**
-     *
-     * @param string $currentVersion
-     * @return string $versionUpdatedTo
-     */
-    public function update($initialVersion)
-    {
-        $this->setVersion('0.1.0');
-
-        if ($this->isVersion('0.1.0')) {
-          call_user_func(new RegisterKentalowPciA(), ['0.1.0']); // このバージョンはmanifest.phpのバージョン(エクステンションの)のではなく、kentalowPciAのバージョン
-          $this->setVersion('0.2.0');
-        }
+    protected function getSourceDirectory(){
+        $viewDir = \common_ext_ExtensionsManager::singleton()->getExtensionById('kentalowPci')->getConstant('DIR_VIEWS');
+        return $viewDir.implode(DIRECTORY_SEPARATOR, ['js', 'pciCreator', 'kentalowPciA']);
     }
 }
