@@ -1,3 +1,3 @@
 <div class="kentalowPciA">
-    Hello World
+    こんにちは <ruby>世界<rt>せかい</rt></ruby>！
 </div>
